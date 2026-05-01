@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | FashionHub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&family=Lobster&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #c5a059;
+            --bg: #fafafa;
+            --text: #444;
+            --white: #ffffff;
+            --nav-pink: rgba(255, 192, 203, 0.7); 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-custom {
+            background: var(--nav-pink) !important;
+            backdrop-filter: blur(8px);
+            padding-top: 4px !important;
+            padding-bottom: 4px !important;
+            border-bottom: 1px solid rgba(0,0,0,0.4); 
+        }
+         
+        .navbar { height: 45px; display: flex; align-items: center; }
+        .navbar a { font-size: 14px; margin: 2px; }
+
+        .navbar-brand {
+            font-family: 'Lobster', cursive;
+            font-size: 26px !important; 
+            padding: 0 !important;
+            margin-right: 5px;
+        }
+        .navbar-brand span:first-child { color: #d81b60; }
+        .navbar-brand span:last-child { color: #4b0082; }
+
+        .nav-link { font-size: 14px !important; font-weight: bold; }
+
+        .right-nav-container {
+            display: flex;
+            align-items: center;
+            gap: 12px; 
+        }
+
+        .form-control-sm {
+            height: 28px !important; 
+            font-size: 12px !important;
+            width: 150px !important;
+            background-color: rgba(255, 255, 255, 0.8) !important;
+            border: 1px solid rgba(0, 0, 0, 0.3) !important; 
+            border-radius: 5px !important; 
+            padding-left: 5px !important;
+            color: #333 !important;
+        }
+
+        .btn-custom-nav {
+            padding: 3px 12px !important; 
+            font-size: 12px !important;
+            border-radius: 4px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero {
+            height: 35vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+     url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=2070') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; }
+
+        
+        .contact-wrap {
+            background: #fff;
+            margin-top: -50px; 
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+
+        .info-box {
+            background-color: #fcfcfc;
+            padding: 50px;
+            border-right: 1px solid #eee;
+        }
+
+        .form-box { padding: 50px; }
+
+        .contact-title { font-family: 'Playfair Display', serif; font-weight: 700; margin-bottom: 25px; }
+
+        .form-label { font-size: 12px; font-weight: 600; text-transform: uppercase; color: #888; }
+
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #ddd;
+            border-radius: 0;
+            padding: 10px 0;
+            font-size: 14px;
+            background: transparent;
+        }
+
+        .form-control:focus { box-shadow: none; border-color: var(--accent); }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            padding: 10px 40px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: none;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover { background: var(--accent); }
+
+        .info-item { margin-bottom: 30px; }
+        .info-item h6 { font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--accent); margin-bottom: 5px; }
+        .info-item p { font-size: 15px; color: #555; }
+
+        @media (max-width: 768px) {
+            .contact-wrap { margin-top: 20px; }
+            .info-box { border-right: none; border-bottom: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand fw-bold" href="#">
+            <span>Fashion</span><span>Hub</span>
+        </a> 
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+            <span class="navbar-toggler-icon" style="font-size: 0.8rem;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link text-dark" href="FashionHubIndex.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="productlogin.html">Product</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Category</a>
+                    <ul class="dropdown-menu shadow-sm">
+                        <li><a class="dropdown-item" href="#">Women</a></li>
+                        <li><a class="dropdown-item" href="#">Men</a></li>
+                        <li><a class="dropdown-item" href="#">Kids</a></li>
+                        <li><a class="dropdown-item" href="#">Makeup</a></li>
+                        <li><a class="dropdown-item" href="#">Wemen Footwear</a></li>
+                        <li><a class="dropdown-item" href="#"> Men Footwear</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link text-dark" href="adminlogin.html">Admin</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Features</a>
+                <ul class="dropdown-menu shadow-sm">
+                 <li><a class="dropdown-item" href="about.html">About</a></li>
+                 <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                 <li><a class="dropdown-item" href="service.html">Services</a></li>
+                 <li><a class="dropdown-item" href="privacy.html">Privacy & Security</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+ 
+          <div class="right-nav-container">
+                <form class="d-flex">
+                    <input class="form-control form-control-sm" type="search" placeholder="Search">
+                </form>
+
+                <div class="btn-group">
+                    <button class="btn btn-outline-dark fw-bold btn-custom-nav dropdown-toggle" data-bs-toggle="dropdown">
+                        PROFILE
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                        <li><a class="dropdown-item" href="useregister.html">Sign-Up</a></li>
+                        <li><a class="dropdown-item" href="userlogin.html">Login</a></li>
+                        <li><a class="dropdown-item" href="userorder.html">My Order</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Cash/Reward</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            
+
+
+
+       </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <p style="letter-spacing: 5px; font-weight: 300; font-size: 0.8rem;">CONTACT US</p>
+        <h1>Get In Touch</h1>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-11 contact-wrap">
+            <div class="row g-0">
+                <div class="col-md-5 info-box">
+                    <h2 class="contact-title">Contact Information</h2>
+                    <p class="text-muted mb-5" style="font-size: 14px;">We'd love to hear from you. Our team is always here to chat.</p>
+                    
+                    <div class="info-item">
+                        <h6>Email Support</h6>
+                        <p>support@fashionhub.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h6>Visit Our Showroom</h6>
+                        <p>123 Elegance Blvd, Design District<br>Mumbai, MH 400001</p>
+                    </div>
+                    <div class="info-item">
+                        <h6>Call Us</h6>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="col-md-7 form-box">
+                    <form action="contact_handler.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" name="name" required placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" name="email" required placeholder="email@fashion.com">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-control" name="subject" required placeholder="Order Inquiry, Sizing, etc.">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" name="message" rows="4" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
